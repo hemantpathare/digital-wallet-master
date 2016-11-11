@@ -1,0 +1,6 @@
+CREATE TABLE transaction_history(time TEXT, id1 INTEGER,id2 INTEGER,amount REAL,message TEXT);
+.separator ','
+.import ./paymo_input/batch_payment.txt transaction_history 
+
+CREATE TABLE transaction_stream(time TEXT, id1 INTEGER,id2 INTEGER,amount REAL,message TEXT);
+.import ./paymo_input/stream_payment.txt transaction_stream 
